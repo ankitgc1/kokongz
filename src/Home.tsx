@@ -263,11 +263,11 @@ const Home = (props: HomeProps) => {
           <Col className="d-flex justify-content-center text-center">
             <div className="tran-box">
               
-              {wallet && <p> <h4> Total Available: {itemsAvailable} </h4></p>}
+              {/* {wallet && <p> <h4> Total Available: {itemsAvailable} </h4></p>}
 
               {wallet && <p> <h4> Redeemed: {itemsRedeemed}</h4></p>}
 
-              {wallet && <p> <h4> Remaining: {itemsRemaining}</h4></p>}
+              {wallet && <p> <h4> Remaining: {itemsRemaining}</h4></p>} */}
               <MintContainer>
                 {!wallet ? (
                   <ConnectButton>Connect Wallet</ConnectButton>
