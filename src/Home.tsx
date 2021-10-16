@@ -233,16 +233,16 @@ const Home = (props: HomeProps) => {
         </Row>
         <Row className="mt-3">
           <Col className="d-flex justify-content-center text-center">
-            <h2 className="white">HOWDY! WELCOME T' THUH WILD WILD WEST OF THE NFT METAVERSE</h2>
+            <h2 className="white">WELCOME TO THE KOKONGZ JUNGLE</h2>
           </Col>
         </Row>
-        <Row className="mt-3">
+        {/* <Row className="mt-3">
           <Col className="d-flex justify-content-center text-center">
             <h3 className="white">
               Hailing from the wild wild west, Kon Kongz is a collection of 3,333 distinct mods of a Kongs.
             </h3>
           </Col>
-        </Row>
+        </Row> */}
         <Row className="mt-3">
           <Col className="d-flex justify-content-center text-center">
             <h3 className="white">
@@ -257,6 +257,14 @@ const Home = (props: HomeProps) => {
               alt="Solana"
               src={sol}>
             </img>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="d-flex justify-content-center text-center">
+            <div className="tran-box">
+              <strong>Launch Date <br></br><br></br></strong>
+              7PM UTC, 28th November 2021
+            </div>
           </Col>
         </Row>
         <Row>
@@ -299,14 +307,7 @@ const Home = (props: HomeProps) => {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col className="d-flex justify-content-center text-center">
-            <div className="tran-box">
-              <strong>Launch Date <br></br><br></br></strong>
-              7PM UTC, 28th November 2021
-            </div>
-          </Col>
-        </Row>
+        
       </Container>
       </Container>
 
