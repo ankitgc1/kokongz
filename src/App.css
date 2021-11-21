@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2f3033;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   }
 }
 .tran-bg{
-  background-color:rgba(66, 87, 88, 0.7);
+  background-color:rgba(41, 47, 48, 0.7);
   padding-bottom: 20px;
 }
 .story-para{
@@ -63,7 +63,7 @@
 }
 
 .tran-para {
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 4px;
 }
 

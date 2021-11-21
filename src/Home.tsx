@@ -24,10 +24,15 @@ import {
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav, Row, Col, Button, Form} from 'react-bootstrap';
-import logo from './images/logo.png';
-import bgImg from './images/bg3.jpg'
+import logo from './images/logo.jpg';
+import bgImg from './images/bg.jpg'
 import gif from './images/gif.gif'
 import sol from './images/solana_logo.png'
+import pain from './images/pain.jpg'
+import anger from './images/anger.jpg'
+import happy from './images/happy.jpg'
+import lust from './images/lust.jpg'
+import sad from './images/sad.jpg'
 
 
 const ConnectButton = styled(WalletDialogButton)``;
@@ -181,11 +186,10 @@ const Home = (props: HomeProps) => {
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    // backgroundRepeat: 'no-repeat',
     minHeight: '100%',
     width: '100%',
-    // height: '100vh'
   };
+  
   const navitem = {
     color: 'white',
   }
@@ -196,7 +200,7 @@ const Home = (props: HomeProps) => {
   }
 
   // Webpage title
-  document.title = 'KoKongz'
+  document.title = 'Emopow'
   
   return (
     <main style={styles}>
@@ -207,9 +211,10 @@ const Home = (props: HomeProps) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link style={navitem} href="#storyline">Storyline</Nav.Link>
-              <Nav.Link style={navitem} href="#faq">FAQ</Nav.Link>
-              <Nav.Link style={navitem} href="#attributes">Attributes</Nav.Link>
+              <Nav.Link style={navitem} href="#About">About</Nav.Link>
+              <Nav.Link style={navitem} href="#Emotions">Emotions</Nav.Link>
+              <Nav.Link style={navitem} href="#FAQ">FAQ</Nav.Link>
+              <Nav.Link style={navitem} href="#Team">Team</Nav.Link>
               <Nav.Link style={navitem} href="#contact-us">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -228,21 +233,14 @@ const Home = (props: HomeProps) => {
         </Row>
         <Row>
           <Col className="d-flex justify-content-center text-center">
-            <h1 className="white">KoKongz</h1>
+            <h1 className="white">EMOPOW</h1>
           </Col>
         </Row>
         <Row className="mt-3">
           <Col className="d-flex justify-content-center text-center">
-            <h2 className="white">WELCOME TO THE KOKONGZ JUNGLE</h2>
+            <h2 className="white">Emotions on solana</h2>
           </Col>
         </Row>
-        {/* <Row className="mt-3">
-          <Col className="d-flex justify-content-center text-center">
-            <h3 className="white">
-              Hailing from the wild wild west, Kon Kongz is a collection of 3,333 distinct mods of a Kongs.
-            </h3>
-          </Col>
-        </Row> */}
         <Row className="mt-3">
           <Col className="d-flex justify-content-center text-center">
             <h3 className="white">
@@ -263,19 +261,13 @@ const Home = (props: HomeProps) => {
           <Col className="d-flex justify-content-center text-center">
             <div className="tran-box">
               <strong>Launch Date <br></br><br></br></strong>
-              7PM UTC, 28th November 2021
+              Join Discord to know more
             </div>
           </Col>
         </Row>
         <Row>
           <Col className="d-flex justify-content-center text-center">
-            <div className="tran-box">
-              
-              {/* {wallet && <p> <h4> Total Available: {itemsAvailable} </h4></p>}
-
-              {wallet && <p> <h4> Redeemed: {itemsRedeemed}</h4></p>}
-
-              {wallet && <p> <h4> Remaining: {itemsRemaining}</h4></p>} */}
+            {/* <div className="tran-box">
               <MintContainer>
                 {!wallet ? (
                   <ConnectButton>Connect Wallet</ConnectButton>
@@ -304,36 +296,41 @@ const Home = (props: HomeProps) => {
                   </MintButton>
                 )}
               </MintContainer>
-            </div>
+            </div> */}
           </Col>
         </Row>
         
       </Container>
       </Container>
 
-      <div className="tran-bg" id="storyline">
+      <div className="tran-bg" id="About">
         <Container>
         <Row className="mt-3">
+            <Row className="mt-5">
+              <h1 className="white justify-content-center text-center">ABOUT</h1> 
+            </Row>
           <Col className="mt-5" lg="8">
-            <Row>
-              <h1 className="white">Storyline</h1> 
-            </Row>
             <Row className="mt-2 white" style={para}>
-              KoKongz story A few years ago, the KoKongz were created by accident, following a scientific experiment. They escaped from the lab and began to live in the jungle, the jungle of Solana. Initially, the KoKongz were made of gold, but today only a few are still alive, making them the rarest KoKongz in the jungle. 
+              <h4>
+                Emopow makes it easy for anyone to show their emotions and feelings through arts and crafts, demonstrating their thoughts and feelings in a new and creative way.
+              </h4> 
             </Row>
             <Row className="mt-5 white" style={para}>
-              KoKongz are as intelligent as humans and their occupation is to steal clothing or accessories from humans and wear them. 
+              <strong>Express yourself: </strong>
+              Making Arts is therapeutic. Emopow is a great way to express yourself and let it all out while having fun at the same time.
             </Row>
             <Row className="mt-5 white" style={para}>
-              Thanks to new technology, our team managed to catch them all, but we won't be able to keep them all for long, so we need your help! If you think you are strong enough to tame one of them, your help is welcome. 
+            <strong>And it's not just always humans: </strong>
+              Don't think this is just for humans - Emopow is designed for any living thing emotions. You can show your pets as well!
             </Row>
-            <Row className="mt-4 white" style={para}>
+            {/* <Row className="mt-4 white" style={para}>
               <strong>WARNING: </strong> The rarer they are, the harder they are to tame, so be careful!
-            </Row>
+            </Row> */}
           </Col>
           <Col lg="4" className="d-flex justify-content-center text-center">
             <img style={{borderRadius: "50%", marginTop:"100px"}}
-              height="350"
+              height="400"
+              width="400"
               alt=""
               src={gif}>
             </img>
@@ -341,13 +338,115 @@ const Home = (props: HomeProps) => {
         </Row>
         </Container>
       </div>
-      
 
-      <div id="faq">
+
+      <div id="Emotions">
         <Container>
           <Row className="mt-3 d-flex justify-content-center text-center">
             <Col className="mt-5">
-              <h1 className="white">Frequently asked questions</h1>
+              <h1 className="white">CURRENT EMOTIONS ON EMOPOW</h1>
+            </Col>
+          </Row>
+
+          <div className="jss674">
+            <Row>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Pain</h2>
+                  <p className="tran-para">
+                    Pain in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={pain}>
+                  </img>
+                </div>
+              </Col>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Anger</h2>
+                  <p className="tran-para">
+                    Anger in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={anger}>
+                  </img>
+                </div>
+              </Col>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Happy</h2>
+                  <p className="tran-para">
+                    Happy in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={happy}>
+                  </img>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Lust</h2>
+                  <p className="tran-para">
+                    Lust in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={lust}>
+                  </img>
+                </div>
+              </Col>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Sad</h2>
+                  <p className="tran-para">
+                    Sadness in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={sad}>
+                  </img>
+                </div>
+              </Col>
+              {/* <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <h2 className="justify-content-center text-center">Happy</h2>
+                  <p className="tran-para">
+                    Happy in not just a world, let's show what it is by the art
+                  </p>
+                  <img style={{borderRadius: "50%", marginTop:"10px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={gif}>
+                  </img>
+                </div>
+              </Col> */}
+            </Row>
+          </div>
+        </Container>
+      </div>
+      
+
+      <div className="tran-bg" id="FAQ">
+        <Container>
+          <Row className="mt-3 d-flex justify-content-center text-center">
+            <Col className="mt-5">
+              <h1 className="white">FREQUENTLY ASKED QUESTIONS</h1>
             </Col>
           </Row>
 
@@ -357,7 +456,7 @@ const Home = (props: HomeProps) => {
                 <strong>Q.</strong> What is the total supply ?
               </p>
               <p className="tran-para">
-                <strong>A.</strong> Only 3,333 KoKongz NFTs will be available for sale.
+                <strong>A.</strong> First We will launch with a fixed supply to mint after that we will open it for the artist to show their emotions through arts.
               </p>
             </div>
             <div className="mt-5 tran-box road-box">
@@ -365,15 +464,15 @@ const Home = (props: HomeProps) => {
                 <strong>Q.</strong> What's the mint price ?
               </p>
               <p className="tran-para">
-                <strong>A.</strong> Mint price is 1.33 Sol, because as you can see we like "3".
+                <strong>A.</strong> Mint price is 2.7 Sol, because there are total 27 emotions in human.
               </p>
             </div>
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
-                <strong>Q.</strong> Is there a limit to how many KoKongz I can mint ?
+                <strong>Q.</strong> Is there a limit to how many Emopow I can mint ?
               </p>
               <p className="tran-para">
-                <strong>A.</strong> Yes, 1 per transaction
+                <strong>A.</strong> No, You can have as many emotions as you want.
               </p>
             </div>
             <div className="mt-5 tran-box road-box">
@@ -381,167 +480,132 @@ const Home = (props: HomeProps) => {
                 <strong>Q.</strong> Will there be a whitelist or a pre-sale ?
               </p>
               <p className="tran-para">
-                <strong>A.</strong> No, but top 33 people with the most invites count on discord will win a free KoKongz.
+                <strong>A.</strong> No, but top 3 people with the most minting count will win a free emotion.
               </p>
             </div>
-            <div className="mt-5 tran-box road-box">
+            {/* <div className="mt-5 tran-box road-box">
               <p className="tran-para">
                 <strong>Q.</strong> What about secondary sale royalties ?
               </p>
               <p className="tran-para">
                 <strong>A.</strong> Second sale royalties will be 3% and 50% of them will be given to a lucky holder each week.
               </p>
-            </div>
+            </div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
                 <strong>Q.</strong> When will you launch ?
               </p>
               <p className="tran-para">
-                <strong>A.</strong> On november 28th, 7PM UTC.
+                <strong>A.</strong> Join our discord to know more about this.
               </p>
             </div>
           </div>
         </Container>
       </div>
 
-      {/* <Container>
-        <Row className="mt-5">
-          <Col className="mt-3 d-flex justify-content-center text-center">
-            <h1 className="white">Degen Lizzy's Cowboys of the Metaverse</h1>
-          </Col>
-        </Row>
-        <Row className="mt-3">
-          <Col className="d-flex justify-content-center text-center">
-            <h1 className="white">
-              If you've just arrived in our metaverse, here's what you need to know
-            </h1>
-          </Col>
-        </Row>
 
-        <Row className="mt-3 d-flex justify-content-center text-center">
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-        </Row>
-        <Row className="mt-3 d-flex justify-content-center text-center">
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-          <Col lg="3" className="tran-box">
-            <p className="tran-para">
-            Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-            </p>
-          </Col>
-        </Row>
-      </Container> */}
-
-      <div className="tran-bg" id="">
+      <div>
         <Container>
           <Row className="mt-3 d-flex justify-content-center text-center">
+            <Col className="mt-5">
+              <h1 className="white">Team</h1>
+            </Col>
+          </Row>
+
+          <div className="jss674">
+            <Row>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <img style={{borderRadius: "50%", marginBottom: "50px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={pain}>
+                  </img>
+                  <h2 className="justify-content-center text-center">Mr. Pain</h2>
+                  <p className="tran-para">
+                    The Co-founder
+                  </p>
+                </div>
+              </Col>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <img style={{borderRadius: "50%", marginBottom: "50px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={happy}>
+                  </img>
+                  <h2 className="justify-content-center text-center">Mr. Happy</h2>
+                  <p className="tran-para">
+                    The Artist
+                  </p>
+                </div>
+              </Col>
+              <Col>
+                <div className="mt-5 tran-box road-box .jss675 justify-content-center text-center">
+                  <img style={{borderRadius: "50%", marginBottom: "50px"}}
+                    height="200"
+                    width="200"
+                    alt=""
+                    src={anger}>
+                  </img>
+                  <h2 className="justify-content-center text-center">Mr Anger</h2>
+                  <p className="tran-para">
+                    The Marketing Head
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </div>
+
+
+      {/* <div className="tran-bg" id="">
+        <Container>
+          <Row className="mt-5 d-flex justify-content-center text-center">
             <Col className="mt-5">
               <h1 className="white">What will happen once mint is done ?</h1>
             </Col>
           </Row>
 
           <div className="jss674">
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box .jss675">
               <p className="tran-para">
                 Rewards for rarest attributes mint, list will be on twitter, 1.33 sol reward/attribute
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
               Listing on marketplaces
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
                 KoKongz HUNT : 432 sol for the winner !
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
                 KoKongz lottery : 10 lucky holders will win 1200$ each
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
               Something that was never done before will happen after the KoKongz HUNT! We'll reward our community by a really innovative way ( 1month after mint is complete)
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
             <div className="mt-5 tran-box road-box">
               <p className="tran-para">
               Each week : 50% of royaltie fees to a random holder
               </p>
             </div>
-            {/* <div className="jss677 jss686"><div className="jss678"></div><div className="jss679"> </div></div> */}
           </div>
-          {/* <Row className="mt-3">
-            <Col md={{ span: 4, offset: 7 }} className="tran-box road-box">
-              <p className="tran-para">
-              Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-              </p>
-            </Col>
-          </Row>
-
-          <Row className="mt-5">
-            <Col md={{ span: 4, offset: 1 }}className="tran-box road-box">
-              <p className="tran-para">
-              Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-              </p>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col md={{ span: 4, offset: 7 }} className="tran-box road-box">
-              <p className="tran-para">
-              Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-              </p>
-            </Col>
-          </Row>
-
-          <Row className="mt-5">
-            <Col md={{ span: 4, offset: 1 }}className="tran-box road-box">
-              <p className="tran-para">
-              Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-              </p>
-            </Col>
-          </Row>
-          <Row className="mt-3">
-            <Col md={{ span: 4, offset: 7 }} className="tran-box road-box">
-              <p className="tran-para">
-              Acknowledge the Corn, the Degen Lizzy and his attributes were hand-drawn by an Ace-High artist
-              </p>
-            </Col>
-          </Row> */}
         </Container>
-      </div>
+      </div> */}
 
-      <div id="attributes">
+      {/* <div id="attributes">
         <Container>
           <Row className="mt-3 d-flex justify-content-center text-center">
               <Col className="mt-5">
@@ -551,7 +615,6 @@ const Home = (props: HomeProps) => {
 
           <Row className="mt-3">
             <Col md={5} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Eyes</h1>
                 <div><span className="dot"></span> Stars 7%</div>
                 <div><span className="dot"></span>Sad 7%</div>
@@ -569,10 +632,8 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Crosses In Eyes 4%</div>
                 <div><span className="dot"></span> Monocle 3%</div>
                 <div><span className="dot"></span> Normal Eyes 20%</div>
-              {/* </div> */}
             </Col>
             <Col md={{ span: 5, offset: 1 }} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Upper Clothes</h1>
                 <div><span className="dot"></span>Casual Coat 7%</div>
                 <div><span className="dot"></span>Sad 7%</div>
@@ -595,12 +656,10 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Army tee 6%</div>
                 <div><span className="dot"></span> Dirty t-shirt 6%</div>
                 <div><span className="dot"></span> Prisoner t-shirt 4%</div>
-              {/* </div> */}
             </Col>
           </Row>
           <Row className="mt-3">
             <Col md={5} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Hat</h1>
                 <div><span className="dot"></span> Cowboy hat 7%</div>
                 <div><span className="dot"></span> Army hat 7%</div>
@@ -621,10 +680,8 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Cooking hat 6%</div>
                 <div><span className="dot"></span> Devil corn 3%</div>
                 <div><span className="dot"></span> Angel oracle 3%</div>
-              {/* </div> */}
             </Col>
             <Col md={{ span: 5, offset: 1 }} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Fur</h1>
                 <div><span className="dot"></span> Black 10%</div>
                 <div><span className="dot"></span> Blue 10%</div>
@@ -638,58 +695,48 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Grey 10%</div>
                 <div><span className="dot"></span> RoBot 4.5%</div>
                 <div><span className="dot"></span> Yellow 10%</div>
-              {/* </div> */}
             </Col>
           </Row>
 
           <Row className="mt-3">
             <Col md={5} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Mouth</h1>
                 <div><span className="dot"></span> Diamond teeth 5%</div>
                 <div><span className="dot"></span> Mulitcouloured teeth 5%</div>
                 <div><span className="dot"></span> White teeth 55%</div>
                 <div><span className="dot"></span> Dirty teeth 25%</div>
                 <div><span className="dot"></span> Beard 10%</div>
-              {/* </div> */}
             </Col>
             <Col md={{ span: 5, offset: 1 }} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Hands</h1>
                 <div><span className="dot"></span> Boxing gloves 17%</div>
                 <div><span className="dot"></span> Iron fist 14%</div>
                 <div><span className="dot"></span> Cyborg fist 4%</div>
                 <div><span className="dot"></span> Normal fist 65%</div>
-              {/* </div> */}
             </Col>
           </Row>
 
           <Row className="mt-3">
             <Col md={5} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Feets</h1>
                 <div><span className="dot"></span> Casual black shoes 11%</div>
                 <div><span className="dot"></span> Casual white shoes 11%</div>
                 <div><span className="dot"></span> High shoes black 10%</div>
                 <div><span className="dot"></span> Robots feet 3%</div>
                 <div><span className="dot"></span> Regular 65%</div>
-              {/* </div> */}
             </Col>
             <Col md={{ span: 5, offset: 1 }} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Chains</h1>
                 <div><span className="dot"></span> Gold 12.5%</div>
                 <div><span className="dot"></span> Chain with eth logo 12.5%</div>
                 <div><span className="dot"></span> Chain with btc logo 12.5%</div>
                 <div><span className="dot"></span> Shiny jewels chain 12.5%</div>
                 <div><span className="dot"></span> No chain 50%</div>
-              {/* </div> */}
             </Col>
           </Row>
 
           <Row className="mt-3">
             <Col md={5} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Backgrounds</h1>
                 <div><span className="dot"></span> Forest 5%</div>
                 <div><span className="dot"></span> Beach (with sun) 5%</div>
@@ -705,10 +752,8 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Grass green 10%</div>
                 <div><span className="dot"></span> Red 10%</div>
                 <div><span className="dot"></span> Black 5%</div>
-              {/* </div> */}
             </Col>
             <Col md={{ span: 5, offset: 1 }} className="tran-box road-box">
-              {/* <div  className="tran-box road-box"> */}
               <h1 className="white">Head</h1>
                 <div><span className="dot"></span> Black 9%</div>
                 <div><span className="dot"></span> Blue 9%</div>
@@ -722,7 +767,6 @@ const Home = (props: HomeProps) => {
                 <div><span className="dot"></span> Turquoise 9%</div>
                 <div><span className="dot"></span> Yellow 9%</div>
                 <div><span className="dot"></span> Zombie 9%</div>
-              {/* </div> */}
             </Col>
           </Row>
 
@@ -742,139 +786,8 @@ const Home = (props: HomeProps) => {
               </div>
             </Col>
           </Row>
-          
-          {/* <Row className="mt-3 d-flex justify-content-center text-center">
-            <Col className="mt-5">
-              <h1 className="white">Attributes</h1>
-            </Col>
-          </Row>
-
-          <Row className="mt-3">
-            <Col md={4}>
-              <div  className="tran-box road-box">
-              <h1 className="white">Attributes</h1>
-                <Form.Select size="sm">
-                  <option>Eyes</option>
-                  <option>Upper Clothes</option>
-                  <option>Hat</option>
-                  <option>Fur</option>
-                  <option>Mouth</option>
-                  <option>Hands</option>
-                  <option>Feets</option>
-                  <option>Backgrounds</option>
-                  <option>Lower Clothes</option>
-                  <option>Chains(Big)</option>
-                  <option>Head</option>
-                </Form.Select>
-              </div>
-              <div className="tran-box road-box">
-                <Form.Check
-                  type="radio"
-                  label="Stars 7%"
-                  name="formHorizontalRadios"
-                  id="Stars"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Sad 7%"
-                  name="formHorizontalRadios"
-                  id="Sad"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Hypnotized 5.5%"
-                  name="formHorizontalRadios"
-                  id="Hypnotized"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Zombie 0.5%"
-                  name="formHorizontalRadios"
-                  id="Zombie"
-                />
-                <Form.Check
-                  type="radio"
-                  label="3D Glasses 5%"
-                  name="formHorizontalRadios"
-                  id="3d-glasses"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Sleepy 6.5%"
-                  name="formHorizontalRadios"
-                  id="Sleepy"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Sunglasses 7%"
-                  name="formHorizontalRadios"
-                  id="Sunglasses"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Heart 4.5%"
-                  name="formHorizontalRadios"
-                  id="Heart"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Laser 4.5%"
-                  name="formHorizontalRadios"
-                  id="Laser"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Eyepatch 3%"
-                  name="formHorizontalRadios"
-                  id="Eyepatch"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Holographic Glasses 1.5%"
-                  name="formHorizontalRadios"
-                  id="Holographic-glasses"
-                />
-                <Form.Check
-                  type="radio"
-                  label="VR visualizer 3%"
-                  name="formHorizontalRadios"
-                  id="VR-visualizer"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Casual glasses 18%"
-                  name="formHorizontalRadios"
-                  id="Casual-glasses"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Crosses In Eyes 4%"
-                  name="formHorizontalRadios"
-                  id="Crosses-in-eyes"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Monocle 3%"
-                  name="formHorizontalRadios"
-                  id="Monocle"
-                />
-                <Form.Check
-                  type="radio"
-                  label="Normal Eyes 20%"
-                  name="formHorizontalRadios"
-                  id="Normal-eyes"
-                />
-
-              </div>
-            </Col>
-            <Col md={{ span: 6, offset: 2 }}>
-              <div className="tran-box road-box">
-                
-              </div>
-            </Col>
-          </Row> */}
         </Container>
-      </div>
+      </div> */}
 
       <div className="tran-bg pt-3 pb-5" id="contact-us">
         <Container>
@@ -917,7 +830,7 @@ const Home = (props: HomeProps) => {
           <Row className="mt-3 d-flex justify-content-center text-center">
             <Col>
               <h3 className="white">
-              Copyright 2021 by KoKongz. All rights reserved.
+              Copyright 2021 by Emopow. All rights reserved.
               </h3>
             </Col>
           </Row>
